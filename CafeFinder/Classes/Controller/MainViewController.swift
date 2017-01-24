@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        loadData { (json, error) in
+            guard error == nil      else { return }
+            guard let json = json   else { return }
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            print(json.arrayValue)
+            
+        }
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+extension MainViewController {
+    
+    var netTool: NetworkTools { return .default }
+    var urlString: String {
+        return "https://cafenomad.tw/api/v1.0/cafes"
     }
-    */
-
+    var parameters: [String:AnyObject]? {
+        return nil
+    }
+    
+    func loadData(finished:@escaping (_ result: JSON?, _ error: Error?) -> ()) {
+        DispatchQueue.global().async { [weak self] in
+            self?.netTool.requestJson(urlString: (self?.urlString)!, parameters: self?.parameters) { (result, error) in
+                guard error == nil else{
+                    print(error!.localizedDescription)
+                    DispatchQueue.main.async {
+                        finished(nil, error!)
+                    }
+                    return
+                }
+                guard let result = result else { return }
+                let json = JSON(result)
+                DispatchQueue.main.async {
+                    finished(json, nil)
+                }
+            }
+        }
+    }
 }
