@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1BC6F7C51E37336A004E14CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6F7C41E37336A004E14CA /* AppDelegate.swift */; };
-		1BC6F7C71E37336A004E14CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6F7C61E37336A004E14CA /* ViewController.swift */; };
 		1BC6F7CA1E37336A004E14CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6F7C81E37336A004E14CA /* Main.storyboard */; };
 		1BC6F7CC1E37336A004E14CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6F7CB1E37336A004E14CA /* Assets.xcassets */; };
 		1BC6F7CF1E37336A004E14CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6F7CD1E37336A004E14CA /* LaunchScreen.storyboard */; };
+		1BC6F7E41E373906004E14CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6F7E31E373906004E14CA /* MainViewController.swift */; };
+		1BC6F7E71E373931004E14CA /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6F7E61E373931004E14CA /* NetWorkTools.swift */; };
+		8688A7354DD0B04BDF9603E0 /* Pods_CafeFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B6DFE4FD898DC93581A871 /* Pods_CafeFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BC6F7C11E37336A004E14CA /* CafeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC6F7C41E37336A004E14CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BC6F7C61E37336A004E14CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BC6F7C91E37336A004E14CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BC6F7CB1E37336A004E14CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BC6F7CE1E37336A004E14CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BC6F7D01E37336A004E14CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC6F7E31E373906004E14CA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1BC6F7E61E373931004E14CA /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
+		33B6DFE4FD898DC93581A871 /* Pods_CafeFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B49D65F28A45CF834E7985D /* Pods-CafeFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeFinder/Pods-CafeFinder.release.xcconfig"; sourceTree = "<group>"; };
+		8E6B61BEEED15254920E5339 /* Pods-CafeFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeFinder/Pods-CafeFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8688A7354DD0B04BDF9603E0 /* Pods_CafeFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				1BC6F7C31E37336A004E14CA /* CafeFinder */,
 				1BC6F7C21E37336A004E14CA /* Products */,
+				A872A151285B08736E667BF9 /* Pods */,
+				CAA4F63BFF2FD6588882ED80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +64,63 @@
 			isa = PBXGroup;
 			children = (
 				1BC6F7C41E37336A004E14CA /* AppDelegate.swift */,
-				1BC6F7C61E37336A004E14CA /* ViewController.swift */,
 				1BC6F7C81E37336A004E14CA /* Main.storyboard */,
+				1BC6F7DF1E3738CC004E14CA /* Classes */,
+				1BC6F7DE1E37387B004E14CA /* Supporting Files */,
+			);
+			path = CafeFinder;
+			sourceTree = "<group>";
+		};
+		1BC6F7DE1E37387B004E14CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				1BC6F7CB1E37336A004E14CA /* Assets.xcassets */,
 				1BC6F7CD1E37336A004E14CA /* LaunchScreen.storyboard */,
 				1BC6F7D01E37336A004E14CA /* Info.plist */,
 			);
-			path = CafeFinder;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BC6F7DF1E3738CC004E14CA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BC6F7E21E373906004E14CA /* Controller */,
+				1BC6F7E51E373931004E14CA /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1BC6F7E21E373906004E14CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BC6F7E31E373906004E14CA /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BC6F7E51E373931004E14CA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1BC6F7E61E373931004E14CA /* NetWorkTools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A872A151285B08736E667BF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E6B61BEEED15254920E5339 /* Pods-CafeFinder.debug.xcconfig */,
+				5B49D65F28A45CF834E7985D /* Pods-CafeFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAA4F63BFF2FD6588882ED80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33B6DFE4FD898DC93581A871 /* Pods_CafeFinder.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BC6F7D31E37336A004E14CA /* Build configuration list for PBXNativeTarget "CafeFinder" */;
 			buildPhases = (
+				3E0918DB728AE3E8A9DA6D43 /* [CP] Check Pods Manifest.lock */,
 				1BC6F7BD1E37336A004E14CA /* Sources */,
 				1BC6F7BE1E37336A004E14CA /* Frameworks */,
 				1BC6F7BF1E37336A004E14CA /* Resources */,
+				D6F90B68B326A8584E6BE675 /* [CP] Embed Pods Frameworks */,
+				3A62416D923A956394558C0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +194,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A62416D923A956394558C0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeFinder/Pods-CafeFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0918DB728AE3E8A9DA6D43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F90B68B326A8584E6BE675 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeFinder/Pods-CafeFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BC6F7BD1E37336A004E14CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC6F7C71E37336A004E14CA /* ViewController.swift in Sources */,
 				1BC6F7C51E37336A004E14CA /* AppDelegate.swift in Sources */,
+				1BC6F7E41E373906004E14CA /* MainViewController.swift in Sources */,
+				1BC6F7E71E373931004E14CA /* NetWorkTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +370,9 @@
 		};
 		1BC6F7D41E37336A004E14CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E6B61BEEED15254920E5339 /* Pods-CafeFinder.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4L84BS83X;
 				INFOPLIST_FILE = CafeFinder/Info.plist;
@@ -272,7 +385,9 @@
 		};
 		1BC6F7D51E37336A004E14CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B49D65F28A45CF834E7985D /* Pods-CafeFinder.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y4L84BS83X;
 				INFOPLIST_FILE = CafeFinder/Info.plist;
@@ -302,6 +417,7 @@
 				1BC6F7D51E37336A004E14CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
